@@ -1,15 +1,8 @@
 import { Router } from 'express';
-import User from './app/models/User';
+import userController from './app/controllers/userController';
 
 const routes = new Router();
 
-routes.get('/', async (req, res) => {
-  const user = await User.create({
-    name: 'Guilherme Terriaga',
-    email: 'guilherme.terriaga@gmail.com',
-    password_hash: 'password',
-  });
-  res.json(user);
-});
+routes.post('/users', userController.store);
 
 module.exports = routes;
