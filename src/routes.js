@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import userController from './app/controllers/userController';
+import UserController from './app/controllers/UserController';
 
 const routes = new Router();
 
-routes.post('/users', userController.store);
+routes.post('/users', UserController.store);
 
 module.exports = routes;
