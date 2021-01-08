@@ -10,4 +10,8 @@ module.exports = {
     underscored: true,
     underscoredAll: true,
   },
+  dialectOptions: {
+    useUTC: false,
+  },
+  timezone: '-03:06',
 };
